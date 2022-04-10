@@ -3,7 +3,7 @@
         <topline>
             <template #headline>
               <page-header />
-              <menu />
+              <Menu />
             </template>
             <template #content>
                 <ul class="stories">

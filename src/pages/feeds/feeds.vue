@@ -2,6 +2,7 @@
     <div class="topline">
         <topline>
             <template #headline>
+              <page-header />
             </template>
             <template #content>
                 <ul class="stories">
@@ -24,13 +25,15 @@ import { topline } from '../../components/topline'
 import { storyUserItem } from '../../components/storyUserItem'
 import stories from './data.json'
 import { feed } from '../../components/feed'
+import { pageHeader } from '../../components/pageHeader'
 
 export default {
   name: 'feeds',
   components: {
     topline,
     storyUserItem,
-    feed
+    feed,
+    pageHeader
   },
   data () {
     return {

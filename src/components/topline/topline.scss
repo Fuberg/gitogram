@@ -6,4 +6,11 @@
 
 .content {
     margin-top: 37px;
+    overflow-x: auto;
+    scrollbar-width: none;
 }
+
+.content::-webkit-scrollbar { 
+    /* This is the magic bit for WebKit */
+    display: none;
+  }

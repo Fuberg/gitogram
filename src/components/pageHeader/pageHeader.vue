@@ -1,18 +1,18 @@
 <template>
     <div class="c-page-header">
         <div class="logoIcon">
-            <logo />
+            <icon name="logo" />
         </div>
     </div>
 </template>
 
 <script>
-import { logo } from '../../icons/icon.vue'
+import { icon } from '../../icons/'
 
 export default {
   name: 'page-header',
   components: {
-    logo
+    icon
   }
 }
 </script>

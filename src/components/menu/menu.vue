@@ -1,8 +1,14 @@
 <template>
     <div class="c-menu">
-        <div class="homeIcon">
+        <a class="home-icon" href="#">
             <icon name="home" />
-        </div>
+        </a>
+        <a class="profile-icon" href="#">
+            <img src="https://picsum.photos/300/300" alt="Profile" class="profile-icon__image">
+        </a>
+        <a class="signOut-icon" href="#">
+            <icon name="signOut" />
+        </a>
     </div>
 </template>
 

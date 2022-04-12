@@ -3,7 +3,7 @@
         <topline>
             <template #headline>
               <page-header />
-              <Menu />
+              <BaseMenu />
             </template>
             <template #content>
                 <ul class="stories">
@@ -33,7 +33,7 @@ export default {
   name: 'feeds',
   components: {
     topline,
-    menu,
+    BaseMenu: menu,
     storyUserItem,
     feed,
     pageHeader

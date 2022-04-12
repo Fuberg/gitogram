@@ -1,7 +1,7 @@
 <template>
     <button class="c-story-user-item" @click="$emit('onPress')">
         <div class="avatar">
-            <img :src="avatar" class="img" alt="User Avatar">
+            <img :src="avatar" class="avatar__img" alt="User Avatar">
         </div>
         <div class="username">
             {{ username }}

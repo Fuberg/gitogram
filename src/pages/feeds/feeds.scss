@@ -1,4 +1,8 @@
 .stories {
     display: flex;
     justify-content: space-between;
+
+    &-item:not(:last-child) {
+        margin-right: 1.9375rem;
+      }
 }

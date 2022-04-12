@@ -1,5 +1,7 @@
 <template>
     <div class="c-feed">
+        <person avatarImgSrc="https://picsum.photos/300/300" userName="Jhon Musa" />
+        <slot />
         <toggler @onToggle='toggle' />
         <div class="comments" v-if="shown">
             <ul class="comments-list">
@@ -14,12 +16,14 @@
 <script>
 import { toggler } from '../toggler'
 import { comment } from '../comment'
+import { person } from '../person'
 
 export default {
   name: 'feed-item',
   components: {
     toggler,
-    comment
+    comment,
+    person
   },
   data () {
     return {

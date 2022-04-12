@@ -17,7 +17,15 @@
                 </ul>
             </template>
         </topline>
-        <feed/>
+    </div>
+    <div class="page-content">
+      <ul class="feeds">
+        <li class="feeds__item">
+          <feed class="feed">
+            <repository title="Hello World" description="But not all world" />
+          </feed>
+        </li>
+      </ul>
     </div>
 </template>
 
@@ -28,6 +36,7 @@ import stories from './data.json'
 import { feed } from '../../components/feed'
 import { pageHeader } from '../../components/pageHeader'
 import { menu } from '../../components/menu'
+import { repository } from '../../components/repository'
 
 export default {
   name: 'feeds',
@@ -36,7 +45,8 @@ export default {
     BaseMenu: menu,
     storyUserItem,
     feed,
-    pageHeader
+    pageHeader,
+    repository
   },
   data () {
     return {

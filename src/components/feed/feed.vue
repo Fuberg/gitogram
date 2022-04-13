@@ -2,7 +2,7 @@
     <div class="c-feed">
         <person avatarImgSrc="https://picsum.photos/300/300" userName="Jhon Musa" />
         <slot />
-        <toggler @onToggle='toggle' />
+        <toggler class="toggler" @onToggle='toggle' />
         <div class="comments" v-if="shown">
             <ul class="comments-list">
                 <li class="comments-item" v-for="n in 2" :key="n">
@@ -10,6 +10,7 @@
                 </li>
             </ul>
         </div>
+        <div class="feed-date">15 MAY</div>
     </div>
 </template>
 
@@ -37,3 +38,5 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss" src="./feed.scss"></style>

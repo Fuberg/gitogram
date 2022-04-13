@@ -1,5 +1,5 @@
 <template>
-    <button :class="['button', { activ: isOpened }]" @click="toggle">
+    <button :class="['button', { active: isOpened }]" @click="toggle">
         <span class="text">{{ isOpened ? "Hide" : "View" }} issues</span>
         <span class="icon">
             <icon name="triangle" />

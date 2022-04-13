@@ -1,9 +1,6 @@
 <template>
     <div class="c-comment">
-        <p>
-            <span class="username">{{ username }}</span>
-        </p>
-        {{ text }}
+        <span class="username">{{ username }}</span> {{ text }}
     </div>
 </template>
 
@@ -22,3 +19,5 @@ export default {
   }
 }
 </script>
+
+<style scoped lang="scss" src="./comment.scss"></style>

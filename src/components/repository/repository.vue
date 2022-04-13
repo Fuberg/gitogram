@@ -2,7 +2,7 @@
     <div class="c-repository">
         <h2 class="repository-title">{{ title }}</h2>
         <div class="repository-description">{{ description }}</div>
-        <statistic/>
+        <statistic class="statistic" :starsNumber="23"  :forksNumber="13" />
     </div>
 </template>
 

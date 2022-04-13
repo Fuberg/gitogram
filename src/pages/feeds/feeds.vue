@@ -22,7 +22,7 @@
       <ul class="feeds">
         <li class="feeds__item">
           <feed class="feed">
-            <repository title="Hello World" description="But not all world" />
+            <repository title="Hello World" description="Lorem adfasd fasdf asdf asdf asdf asdf asdf asdf asdfasdfasd fasdfasdfasdfdf a fasdf fadf asdf asdf asdf asdf asdfasdh fljashdf ljashdlf jahsldfjh alsdjhf lajshdfl jahsdlfj hasldjfh alsdjhfl asjdhfljsdhflajshdflajshdlfjasdlfjh asldjfh alsdjfh lsajdhfl asjdhf lasjhdf lajsdfl jahsdlfj halsdjfh alsdjfh la" />
           </feed>
         </li>
       </ul>

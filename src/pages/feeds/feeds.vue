@@ -26,6 +26,7 @@
           </feed>
         </li>
       </ul>
+      <storie />
     </div>
 </template>
 
@@ -37,6 +38,7 @@ import { feed } from '../../components/feed'
 import { pageHeader } from '../../components/pageHeader'
 import { menu } from '../../components/menu'
 import { repository } from '../../components/repository'
+import { storie } from '../../components/storie'
 
 export default {
   name: 'feeds',
@@ -46,7 +48,8 @@ export default {
     storyUserItem,
     feed,
     pageHeader,
-    repository
+    repository,
+    storie
   },
   data () {
     return {

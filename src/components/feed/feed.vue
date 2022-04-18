@@ -1,6 +1,6 @@
 <template>
     <div class="c-feed">
-        <person avatarImgSrc="https://picsum.photos/300/300" userName="Jhon Musa" />
+        <person class="person" avatarImgSrc="https://picsum.photos/300/300" userName="Jhon Musa" />
         <slot />
         <toggler class="toggler" @onToggle='toggle' />
         <div class="comments" v-if="shown">
@@ -38,5 +38,19 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+  .c-feed {
+    .person {
+        .profile-link {
+
+            &__avatar {
+                width: 2.75rem;
+                height: 2.75rem;
+            }
+        }
+    }
+  }
+</style>
 
 <style scoped lang="scss" src="./feed.scss"></style>

@@ -1,6 +1,6 @@
 <template>
     <button class="c-button">
-        {{ text }}
+        <slot></slot>
     </button>
 </template>
 
@@ -8,10 +8,6 @@
 export default {
   name: 'button',
   props: {
-    text: {
-      type: String,
-      require: true
-    }
   }
 }
 </script>

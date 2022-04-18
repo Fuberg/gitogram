@@ -6,7 +6,7 @@
         </div>
         <div class="storie__content"></div>
         <div class="storie__footer">
-            <Button text="Follow" />
+            <Button>Following</Button>
         </div>
     </div>
 </template>

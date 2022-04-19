@@ -5,11 +5,13 @@ export default {
     component: {button}
 }
 
-const template = () => ({
+export const defaultView = () => ({
     components: {xButton: button},
     template: `
         <x-button>Following</x-button>
     `
 })
 
-export const Default = template.bind({})
+defaultView.story = {
+    name: "Стандартный вид"
+}

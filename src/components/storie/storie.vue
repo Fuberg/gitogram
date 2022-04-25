@@ -1,10 +1,12 @@
 <template>
     <div class="c-storie">
         <div class="storie__header">
-            <div class="progress"></div>
+            <progress-line />
             <person class="person" avatarImgSrc="https://picsum.photos/300/300" userName="Jhon Musa" />
         </div>
-        <div class="storie__content"></div>
+        <div class="storie__content">
+            <slot></slot>
+        </div>
         <div class="storie__footer">
             <Button>Following</Button>
         </div>
@@ -14,12 +16,14 @@
 <script>
 import { button } from '../button'
 import { person } from '../person'
+import { progressLine } from '../progressLine'
 
 export default {
   name: 'storie',
   components: {
     Button: button,
-    person
+    person,
+    progressLine
   }
 }
 </script>

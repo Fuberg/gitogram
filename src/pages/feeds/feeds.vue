@@ -20,13 +20,16 @@
     </div>
     <div class="page-content">
       <ul class="feeds">
-        <li class="feeds__item">
-          <feed class="feed">
-            <repository title="Hello World" description="Lorem adfasd fasdf asdf asdf asdf asdf asdf asdf asdfasdfasd fasdfasdfasdfdf a fasdf fadf asdf asdf asdf asdf asdfasdh fljashdf ljashdlf jahsldfjh alsdjhf lajshdfl jahsdlfj hasldjfh alsdjhfl asjdhfljsdhflajshdflajshdlfjasdlfjh asldjfh alsdjfh lsajdhfl asjdhf lasjhdf lajsdfl jahsdlfj halsdjfh alsdjfh la" />
+        <li class="feeds__item" v-for="item in items" :key="item.id">
+          <feed class="feed" :username="item.owner.login" >
+            <repository
+              :title="item.name"
+              :description="item.description"
+            />
           </feed>
         </li>
       </ul>
-      <storie />
+      <pre>{{ items }}</pre>
     </div>
 </template>
 
@@ -38,7 +41,7 @@ import { feed } from '../../components/feed'
 import { pageHeader } from '../../components/pageHeader'
 import { menu } from '../../components/menu'
 import { repository } from '../../components/repository'
-import { storie } from '../../components/storie'
+import * as api from '../../api'
 
 export default {
   name: 'feeds',
@@ -48,12 +51,20 @@ export default {
     storyUserItem,
     feed,
     pageHeader,
-    repository,
-    storie
+    repository
   },
   data () {
     return {
-      stories
+      stories,
+      items: []
+    }
+  },
+  async created () {
+    try {
+      const { data } = await api.trendings.getTrendings()
+      this.items = data.items
+    } catch (error) {
+      console.log(error)
     }
   }
 }

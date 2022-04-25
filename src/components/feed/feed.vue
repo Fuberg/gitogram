@@ -1,6 +1,6 @@
 <template>
     <div class="c-feed">
-        <person class="person" avatarImgSrc="https://picsum.photos/300/300" userName="Jhon Musa" />
+        <person class="person" avatarImgSrc="https://picsum.photos/300/300" :userName="username" />
         <slot />
         <toggler class="toggler" @onToggle='toggle' />
         <div class="comments" v-if="shown">
@@ -26,6 +26,12 @@ export default {
     comment,
     person
   },
+  props: {
+    username: {
+      type: String,
+      required: true
+    }
+  },
   data () {
     return {
       shown: false
@@ -35,6 +41,9 @@ export default {
     toggle (isOpened) {
       this.shown = isOpened
     }
+  },
+  mounted () {
+    console.log(this.username)
   }
 }
 </script>

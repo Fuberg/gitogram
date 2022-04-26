@@ -21,7 +21,9 @@
     <div class="page-content">
       <ul class="feeds">
         <li class="feeds__item" v-for="item in items" :key="item.id">
-          <feed class="feed" :username="item.owner.login" >
+          <feed class="feed"
+            :username="item.owner.login"
+            :avatarImgSrc="item.owner.avatar_url" >
             <repository
               :title="item.name"
               :description="item.description"
@@ -63,6 +65,7 @@ export default {
     try {
       const { data } = await api.trendings.getTrendings()
       this.items = data.items
+      // console.log(this.items)
     } catch (error) {
       console.log(error)
     }

@@ -1,6 +1,6 @@
 <template>
     <div class="c-feed">
-        <person class="person" avatarImgSrc="https://picsum.photos/300/300" :userName="username" />
+        <person class="person" :avatarImgSrc="avatarImgSrc" :userName="username" />
         <slot />
         <toggler class="toggler" @onToggle='toggle' />
         <div class="comments" v-if="shown">
@@ -28,6 +28,10 @@ export default {
   },
   props: {
     username: {
+      type: String,
+      required: true
+    },
+    avatarImgSrc: {
       type: String,
       required: true
     }

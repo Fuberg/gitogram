@@ -1,14 +1,15 @@
 <template>
     <div class="c-menu">
-        <a class="home-icon" href="#">
+        <router-link class="home-icon" to="/">
             <icon name="home" />
-        </a>
-        <a class="profile-icon" href="#">
+        </router-link>
+        <router-link class="profile-icon" to="/user">
             <img src="https://picsum.photos/300/300" alt="Profile" class="profile-icon__image">
-        </a>
+        </router-link>
         <a class="signOut-icon" href="#">
             <icon name="signOut" />
         </a>
+
     </div>
 </template>
 

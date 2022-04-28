@@ -2,7 +2,7 @@
     <div class="topline">
         <topline>
             <template #headline>
-              <page-header />
+              <logo />
               <BaseMenu />
             </template>
             <template #content>
@@ -23,10 +23,13 @@
         <li class="feeds__item" v-for="item in items" :key="item.id">
           <feed class="feed"
             :username="item.owner.login"
-            :avatarImgSrc="item.owner.avatar_url" >
+            :avatarImgSrc="item.owner.avatar_url"
+            :publicDate="item.updated_at" >
             <repository
               :title="item.name"
               :description="item.description"
+              :starsCount="item.stargazers_count"
+              :forksCount="item.forks"
             />
           </feed>
         </li>
@@ -40,7 +43,7 @@ import { topline } from '../../components/topline'
 import { storyUserItem } from '../../components/storyUserItem'
 import stories from './data.json'
 import { feed } from '../../components/feed'
-import { pageHeader } from '../../components/pageHeader'
+import { logo } from '../../components/logo'
 import { menu } from '../../components/menu'
 import { repository } from '../../components/repository'
 import * as api from '../../api'
@@ -52,7 +55,7 @@ export default {
     BaseMenu: menu,
     storyUserItem,
     feed,
-    pageHeader,
+    logo,
     repository
   },
   data () {
@@ -69,6 +72,8 @@ export default {
     } catch (error) {
       console.log(error)
     }
+
+    console.log(this.$store.state.foo)
   }
 }
 </script>

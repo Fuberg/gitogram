@@ -10,7 +10,7 @@
                 </li>
             </ul>
         </div>
-        <div class="feed-date">15 MAY</div>
+        <div class="feed-date">{{ convertedDate }}</div>
     </div>
 </template>
 
@@ -34,11 +34,23 @@ export default {
     avatarImgSrc: {
       type: String,
       required: true
+    },
+    publicDate: {
+      type: String,
+      required: true
     }
   },
   data () {
     return {
       shown: false
+    }
+  },
+  computed: {
+    convertedDate: function () {
+      const localDate = new Date(this.publicDate)
+      const resultDate = localDate.toLocaleString('en-US', { month: 'long', day: 'numeric' })
+
+      return resultDate
     }
   },
   methods: {

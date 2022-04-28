@@ -1,7 +1,7 @@
 <template>
     <div class="c-storie">
         <div class="storie__header">
-            <progress-line />
+            <progress-line active />
             <person class="person" avatarImgSrc="https://picsum.photos/300/300" userName="Jhon Musa" />
         </div>
         <div class="storie__content">
@@ -24,6 +24,15 @@ export default {
     Button: button,
     person,
     progressLine
+  },
+  props: {
+    active: Boolean,
+    loading: Boolean,
+    data: {
+      type: Object,
+      required: true,
+      default: () => ({})
+    }
   }
 }
 </script>

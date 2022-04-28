@@ -1,5 +1,5 @@
 <template>
-    <div class="c-page-header">
+    <div class="c-logo">
         <div class="logoIcon">
             <icon name="logo" />
         </div>
@@ -7,14 +7,14 @@
 </template>
 
 <script>
-import { icon } from '../../icons/'
+import { icon } from '../../icons'
 
 export default {
-  name: 'page-header',
+  name: 'logo',
   components: {
     icon
   }
 }
 </script>
 
-<style scoped lang="scss" src="./pageHeader.scss"></style>
+<style scoped lang="scss" src="./logo.scss"></style>
